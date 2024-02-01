@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Fragment} from 'react'
+import Parent from './Parent'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const styles={
+    color:'red',
+    fontSize:'30px'
 }
-
+function App(){
+    return(
+        <Fragment>
+            <div style={styles}>
+                <h2>Internal style here</h2>
+            </div>
+            <div style={{color:'blue',fontSize:'30px'}}>
+                <h2>Inline Style here</h2>
+            </div>
+            <Parent/>
+        </Fragment>
+    )
+}
 export default App;
